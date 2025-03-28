@@ -5,6 +5,11 @@
     "version": "1.0.0",
     "description": "Expose l'heure UTC actuelle via worldtimeapi.org"
   },
+  "servers": [
+    {
+      "url": "https://ntp-api-vercel.vercel.app"
+    }
+  ],
   "paths": {
     "/api/current-time": {
       "get": {
@@ -20,7 +25,7 @@
                   "properties": {
                     "utc_datetime": {
                       "type": "string",
-                      "example": "2025-03-27T20:11:22Z"
+                      "example": "2025-03-27T21:00:00Z"
                     }
                   }
                 }
