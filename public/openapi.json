@@ -1,0 +1,34 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Heure UTC API",
+    "version": "1.0.0",
+    "description": "Expose l'heure UTC actuelle via worldtimeapi.org"
+  },
+  "paths": {
+    "/api/current-time": {
+      "get": {
+        "operationId": "getCurrentTime",
+        "summary": "Heure UTC",
+        "responses": {
+          "200": {
+            "description": "Heure actuelle UTC",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "utc_datetime": {
+                      "type": "string",
+                      "example": "2025-03-27T20:11:22Z"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
